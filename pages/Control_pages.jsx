@@ -103,15 +103,15 @@ const Control_pages = () => {
                                 <Row size={1} >
                                     <Text style={{fontSize:15}}> Speed (m/sec)</Text> 
                                 </Row>
-                                <Row size={10}>
+                                <Row size={Platform.OS === 'ios' ? 10: 10} >
                                     <RNSpeedometer labelNoteStyle={{ height: 0, width: 0}}
-                                    value={control?proper.speed:0} size={Platform.OS === 'ios' ? 200 : 350} minValue={0} maxValue={5} allowedDecimals={1}/>
+                                    value={control?proper.speed:0} size={Platform.OS === 'ios' ? 280 : 350} minValue={0} maxValue={5} allowedDecimals={1}/>
                                 </Row>
-                                <Row size={Platform.OS === 'ios' ? 6 : 1}></Row>
                             </Col>
                         </Row>
                         <Row size={Platform.OS === 'ios' ? 3 : 2}>
                             <Col>
+
                                 <View style={{width:width,flexDirection:"row",justifyContent:"center",alignItems:"center"}}>
                                     <Text style={{fontSize:20}}>Left</Text>
                                     <Text style={{marginHorizontal:width*0.16,fontSize:20}}>Center</Text>
@@ -122,6 +122,7 @@ const Control_pages = () => {
                                     <Text style={{marginHorizontal:width*0.2,color:"blue",fontWeight:"700"}}>{control?proper.range[1]:0} m</Text>
                                     <Text style={{color:"blue",fontWeight:"700"}}>{control?proper.range[2]:0} m</Text>
                                 </View>
+
 
                                 <ButtonGroup
                                         buttons={buttons}
@@ -142,6 +143,7 @@ const Control_pages = () => {
                                     value={control}
                                     />
                                 </View>
+
                                 {control && <Grid style={{width:"60%",justifyContent:"center",alignSelf:"center"}}>
                                     <Col style={{height:height*0.30,marginVertical:20}}>
                                         <Row size={0.5} style={{justifyContent:"center",alignItems:"center"}} >
@@ -209,8 +211,8 @@ const styles = StyleSheet.create({
  header:{
      justifyContent:"center",
      alignItems:"center",
-     height:height*0.1,
-     marginVertical:0
+     height:Platform.OS === 'ios' ? height*0.05 : height*0.1,
+     marginVertical:0,
  },
  font_header:{
     fontSize:25,

@@ -28,7 +28,7 @@ const Spec_pages = () => {
     return (
       <Container style={styles.container}>
         <Content contentContainerStyle={styles.content}>
-            <Text style={{fontSize:20,paddingTop:10,fontWeight:"bold"}}>e-Rion Specification</Text>
+            <Text style={{fontSize:20,paddingTop:Platform.OS === 'ios'?0:10,fontWeight:"bold"}}>e-Rion Specification</Text>
             <Image style={{width:width*0.8,height:Platform.OS === 'ios'?height*0.3:height*0.35,resizeMode:"contain"}} source={erion_image}></Image>
             <Grid style={{width:"100%",height:height*0.45}}>
                 <Col size={1}>
@@ -142,7 +142,7 @@ const styles = StyleSheet.create({
       content: {
         backgroundColor: 'transparent',
         alignItems: 'center',
-        marginTop:height*0.05
+        marginTop:Platform.OS === 'ios'?0:height*0.05
       },
       title: {
         marginTop: 10,

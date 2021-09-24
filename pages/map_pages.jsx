@@ -376,7 +376,7 @@ const styles = StyleSheet.create({
       }, header:{
         justifyContent:"center",
         alignItems:"center",
-        height:height*0.1,
+        height:Platform.OS === 'ios'?height*0.05:height*0.1,
         marginVertical:0
     },
     font_header:{
