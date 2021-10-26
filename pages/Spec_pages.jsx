@@ -29,7 +29,7 @@ const Spec_pages = () => {
       <Container style={styles.container}>
         <Content contentContainerStyle={styles.content}>
             <Text style={{fontSize:20,paddingTop:Platform.OS === 'ios'?0:10,fontWeight:"bold"}}>e-Rion Specification</Text>
-            <Image style={{width:width*0.8,height:Platform.OS === 'ios'?height*0.3:height*0.35,resizeMode:"contain"}} source={erion_image}></Image>
+            <Image style={{width:width*0.9,height:Platform.OS === 'ios'?height*0.3:height*0.35,resizeMode:"contain"}} source={erion_image}></Image>
             <Grid style={{width:"100%",height:height*0.45}}>
                 <Col size={1}>
                     <Row size={1.5} style={{justifyContent:"center",alignItems:"center",borderWidth:0,borderRadius:15,backgroundColor:"#fbc531",marginBottom:13}}>

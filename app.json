@@ -1,32 +1,20 @@
 {
   "expo": {
-    "name": "erion",
-    "slug": "erion",
+    "name": "e-Rion",
+    "slug": "e-Rion",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
-    "splash": {
-      "image": "./assets/splash.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
-    },
+    "icon": "./assets/icon2.png",
     "updates": {
       "fallbackToCacheTimeout": 0
     },
     "assetBundlePatterns": [
       "**/*"
-    ],
-    "ios": {
-      "supportsTablet": true,
-      "infoPlist": {
-        "NSLocationAlwaysAndWhenInUseUsageDescription": "Allow $(PRODUCT_NAME) to access your location",
-        "NSLocationAlwaysUsageDescription": "Allow $(PRODUCT_NAME) to access your location",
-        "NSLocationWhenInUseUsageDescription": "Allow $(PRODUCT_NAME) to access your location"
-      }
+    ]
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
+        "foregroundImage": "./assets/icon2.png",
         "backgroundColor": "#FFFFFF"
       },
       "config": {
@@ -48,5 +36,5 @@
       "expo-location",
       "expo-image-picker"
     ]
-  }
 }
+

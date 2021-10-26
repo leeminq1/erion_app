@@ -16,7 +16,7 @@ let timer
 const Control_pages = () => {
     
 
-    const buttons = ['Auto', 'Keyboard', 'APP','LIFT']
+    const buttons = ['AutoDrive', 'SelfDrive','LiftMode']
     const [index,setindex]=useState('')   
     const [Ip_address, setIp_address] = useState('');
     const [Tot_address,setTot_address] = useState('');
@@ -98,14 +98,14 @@ const Control_pages = () => {
             <Content scrollEnabled={false} >
                 <Grid style={{marginVertical:0, width:width, height:height,justifyContent:"center",alignItems:"center"}}>
                     <Col style={{height:height}}>
-                        <Row size={1.3} style={{marginVertical:0,justifyContent:"center",alignItems:"center"}}>
+                        <Row size={1} style={{marginVertical:0,justifyContent:"center",alignItems:"center"}}>
                             <Col style={{alignItems:"center",justifyContent:"center"}}>
                                 <Row size={1} >
                                     <Text style={{fontSize:15}}> Speed (m/sec)</Text> 
                                 </Row>
                                 <Row size={Platform.OS === 'ios' ? 10: 10} >
                                     <RNSpeedometer labelNoteStyle={{ height: 0, width: 0}}
-                                    value={control?proper.speed:0} size={Platform.OS === 'ios' ? 280 : 350} minValue={0} maxValue={5} allowedDecimals={1}/>
+                                    value={control?proper.speed:0} size={Platform.OS === 'ios' ? 280 : 330} minValue={0} maxValue={5} allowedDecimals={1}/>
                                 </Row>
                             </Col>
                         </Row>
@@ -118,9 +118,9 @@ const Control_pages = () => {
                                     <Text style={{fontSize:20}}>Right</Text>
                                 </View>
                                 <View style={{width:width,flexDirection:"row",justifyContent:"center",alignItems:"center"}}>
-                                    <Text style={{color:"blue",fontWeight:"700"}}>{control?proper.range[0]:0} m</Text>
-                                    <Text style={{marginHorizontal:width*0.2,color:"blue",fontWeight:"700"}}>{control?proper.range[1]:0} m</Text>
-                                    <Text style={{color:"blue",fontWeight:"700"}}>{control?proper.range[2]:0} m</Text>
+                                    <Text style={{color:"blue",fontWeight:"700"}}>{control?proper.range[0]:0} cm</Text>
+                                    <Text style={{marginHorizontal:width*0.2,color:"blue",fontWeight:"700"}}>{control?proper.range[1]:0} cm</Text>
+                                    <Text style={{color:"blue",fontWeight:"700"}}>{control?proper.range[2]:0} cm</Text>
                                 </View>
 
 
